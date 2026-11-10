@@ -1714,7 +1714,7 @@ body:hover .cursor-glow {
 
 /* Project Action Links */
 .project-links {
-    display: flex;
+    display: none; /* Hidden for now per user request */
     flex-wrap: wrap;
     gap: 10px;
     margin-top: 24px;
