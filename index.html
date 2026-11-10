@@ -1,0 +1,1028 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hirusha Niluminda | Engineering Technology Student</title>
+    <link rel="icon" type="image/png" href="assets/dp.png">
+    <meta property="og:title" content="Hirusha Niluminda | Engineering Technology Student">
+    <meta property="og:description"
+        content="Portfolio of Hirusha Niluminda — Electronics & Telecommunication Engineering Technology student at ITUM, focusing on embedded systems, IoT, and robotics prototyping.">
+    <meta property="og:image" content="assets/dp.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Cursor Glow Effect -->
+    <div class="cursor-glow" id="cursorGlow"></div>
+
+    <!-- Particle Canvas -->
+    <canvas id="particleCanvas"></canvas>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#hero" class="nav-logo">
+                <span class="logo-bracket">&lt;</span>HN<span class="logo-bracket">/&gt;</span>
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#education" class="nav-link">Education</a></li>
+                <li><a href="#certifications" class="nav-link">Certifications</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+                <li>
+                    <a href="assets/Hirusha_Niluminda_CV.pdf" target="_blank" rel="noopener noreferrer"
+                        class="nav-btn-cv">
+                        <i class="fas fa-arrow-up-right-from-square"></i> Resume
+                    </a>
+                </li>
+            </ul>
+            <div class="nav-right">
+                <div class="theme-picker" id="themePicker" title="Change Accent Theme">
+                    <button type="button" class="theme-dot active" data-theme="cyan" style="--c: #00d4ff;"
+                        aria-label="Cyan theme"></button>
+                    <button type="button" class="theme-dot" data-theme="emerald" style="--c: #10b981;"
+                        aria-label="Emerald theme"></button>
+                    <button type="button" class="theme-dot" data-theme="amber" style="--c: #f59e0b;"
+                        aria-label="Amber theme"></button>
+                    <button type="button" class="theme-dot" data-theme="purple" style="--c: #a855f7;"
+                        aria-label="Purple theme"></button>
+                </div>
+                <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-container container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <span class="badge-dot"></span>
+                    Seeking Internship from January 2027
+                </div>
+                <h1 class="hero-title">
+                    <span class="hero-greeting">Hello, I'm</span>
+                    <span class="hero-name">Hirusha Niluminda</span>
+                    <div class="hero-role-wrapper">
+                        <span class="hero-role" id="typedRole"></span><span class="typed-cursor">|</span>
+                    </div>
+                </h1>
+                <p class="hero-description">
+                    Electronics & Telecommunication Engineering Technology student at <strong>Institute of Technology,
+                        University of Moratuwa</strong>,
+                    with hands-on experience in embedded systems, microcontroller programming, sensor interfacing,
+                    and electronics prototyping. Passionate about robotics R&D, firmware development, PCB design,
+                    and industrial automation.
+                </p>
+                <div class="hero-actions">
+                    <a href="#projects" class="btn btn-primary">
+                        <i class="fas fa-rocket"></i> View Projects
+                    </a>
+                    <a href="assets/Hirusha_Niluminda_CV.pdf" target="_blank" rel="noopener noreferrer"
+                        class="btn btn-cv">
+                        <i class="fas fa-arrow-up-right-from-square"></i> Open CV (PDF)
+                    </a>
+                    <a href="#contact" class="btn btn-outline">
+                        <i class="fas fa-envelope"></i> Get in Touch
+                    </a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-number" data-count="6">0</span>
+                        <span class="stat-label">Projects</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number" data-count="5">0</span>
+                        <span class="stat-label">Platforms</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number" data-count="5">0</span>
+                        <span class="stat-label">Certifications</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="profile-card" data-tilt>
+                    <div class="profile-frame">
+                        <img src="assets/dp.png" alt="Hirusha Niluminda" class="profile-avatar"
+                            onerror="this.style.display='none'; var fb=document.getElementById('profileFallback'); if(fb) fb.style.display='flex';">
+                        <div class="profile-fallback" id="profileFallback">
+                            <i class="fas fa-microchip profile-icon"></i>
+                            <span class="profile-badge-txt">&lt;HN&gt;</span>
+                        </div>
+                        <div class="profile-ring"></div>
+                        <div class="profile-ring-outer"></div>
+                    </div>
+                    <div class="profile-status-bar">
+                        <span class="status-live-dot"></span>
+                        <span>EMBEDDED & ROBOTICS PROTOTYPING</span>
+                    </div>
+                </div>
+                <div class="circuit-board">
+                    <div class="chip">
+                        <div class="chip-body">
+                            <span class="chip-label">ESP32</span>
+                        </div>
+                        <div class="chip-pins left"></div>
+                        <div class="chip-pins right"></div>
+                    </div>
+                    <div class="circuit-lines">
+                        <svg viewBox="0 0 400 400" class="circuit-svg">
+                            <path d="M200,50 L200,150 L300,150 L300,250" stroke="var(--accent)" stroke-width="2"
+                                fill="none" class="circuit-path" />
+                            <path d="M100,100 L200,100 L200,200 L100,200" stroke="var(--accent-secondary)"
+                                stroke-width="2" fill="none" class="circuit-path" />
+                            <path d="M150,250 L250,250 L250,350" stroke="var(--accent)" stroke-width="2" fill="none"
+                                class="circuit-path" />
+                            <circle cx="200" cy="150" r="4" fill="var(--accent)" class="circuit-node" />
+                            <circle cx="300" cy="250" r="4" fill="var(--accent)" class="circuit-node" />
+                            <circle cx="200" cy="100" r="4" fill="var(--accent-secondary)" class="circuit-node" />
+                            <circle cx="100" cy="200" r="4" fill="var(--accent-secondary)" class="circuit-node" />
+                            <circle cx="250" cy="250" r="4" fill="var(--accent)" class="circuit-node" />
+                        </svg>
+                    </div>
+                    <div class="floating-icons">
+                        <div class="float-icon" style="--delay: 0s; --x: 20%; --y: 30%"><i class="fas fa-microchip"></i>
+                        </div>
+                        <div class="float-icon" style="--delay: 1s; --x: 70%; --y: 20%"><i class="fas fa-robot"></i>
+                        </div>
+                        <div class="float-icon" style="--delay: 2s; --x: 80%; --y: 60%"><i class="fas fa-cogs"></i>
+                        </div>
+                        <div class="float-icon" style="--delay: 3s; --x: 15%; --y: 70%"><i class="fas fa-wifi"></i>
+                        </div>
+                        <div class="float-icon" style="--delay: 4s; --x: 50%; --y: 80%"><i class="fas fa-bolt"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="mouse">
+                <div class="mouse-wheel"></div>
+            </div>
+            <span>Scroll Down</span>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section about" id="about">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">&lt;about&gt;</span>
+                <h2 class="section-title">Professional Profile</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <p class="about-intro">
+                        I am an Electronics and Telecommunication Engineering student at the
+                        <span class="highlight">Institute of Technology, University of Moratuwa</span>,
+                        with hands-on experience in embedded systems, microcontroller programming,
+                        sensor interfacing, and electronics prototyping.
+                    </p>
+                    <p>
+                        Experienced in developing Arduino- and ESP32-based projects involving automation,
+                        IoT monitoring, and robotics. Interested in
+                        <span class="highlight">robotics R&D</span>,
+                        <span class="highlight">embedded systems</span>,
+                        <span class="highlight">firmware development</span>,
+                        <span class="highlight">PCB design</span>, and
+                        <span class="highlight">industrial automation</span>,
+                        with a focus on practical engineering applications.
+                    </p>
+                    <div class="about-details">
+                        <div class="detail">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Kirindiwela, Sri Lanka</span>
+                        </div>
+                        <div class="detail">
+                            <i class="fas fa-graduation-cap"></i>
+                            <span>University of Moratuwa (ITUM)</span>
+                        </div>
+                        <div class="detail">
+                            <i class="fas fa-search"></i>
+                            <span>Seeking 6-month in-plant training</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <div class="terminal-window" id="interactiveTerminal">
+                        <div class="terminal-header">
+                            <div class="terminal-dots">
+                                <span class="dot red"></span>
+                                <span class="dot yellow"></span>
+                                <span class="dot green"></span>
+                            </div>
+                            <span class="terminal-title">hirusha@portfolio:~ (interactive shell)</span>
+                            <span class="terminal-live-badge"><span class="badge-dot"></span> CLI</span>
+                        </div>
+                        <div class="terminal-body" id="terminalBody">
+                            <div class="terminal-history" id="terminalHistory">
+                                <div class="terminal-line">
+                                    <span class="prompt">$</span>
+                                    <span class="command">whoami</span>
+                                </div>
+                                <div class="terminal-output">Hirusha Niluminda — Electronics & Telecommunication
+                                    Engineering Student (ITUM)</div>
+                                <div class="terminal-line">
+                                    <span class="prompt">$</span>
+                                    <span class="command">cat quick-info.txt</span>
+                                </div>
+                                <div class="terminal-output">
+                                    Specialization: Embedded Systems, Robotics R&D, Motion Control, Industrial
+                                    Automation.<br>
+                                    Seeking: 6-Month In-Plant Training starting January 2027.
+                                </div>
+                                <div class="terminal-line">
+                                    <span class="prompt">$</span>
+                                    <span class="command">help</span>
+                                </div>
+                                <div class="terminal-output text-cyan">
+                                    Available commands: <span class="cmd-pill"
+                                        onclick="runTerminalCmd('projects')">projects</span> <span class="cmd-pill"
+                                        onclick="runTerminalCmd('skills')">skills</span> <span class="cmd-pill"
+                                        onclick="runTerminalCmd('awards')">awards</span> <span class="cmd-pill"
+                                        onclick="runTerminalCmd('cv')">cv</span> <span class="cmd-pill"
+                                        onclick="runTerminalCmd('contact')">contact</span> <span class="cmd-pill"
+                                        onclick="runTerminalCmd('clear')">clear</span>
+                                </div>
+                            </div>
+                            <div class="terminal-line terminal-input-line">
+                                <span class="prompt">$</span>
+                                <input type="text" id="terminalInput" class="terminal-input" autocomplete="off"
+                                    spellcheck="false" placeholder="type a command (e.g. 'projects')...">
+                            </div>
+                        </div>
+                        <div class="terminal-quick-bar">
+                            <span class="quick-label"><i class="fas fa-terminal"></i> Quick:</span>
+                            <button type="button" class="quick-btn"
+                                onclick="runTerminalCmd('projects')">projects</button>
+                            <button type="button" class="quick-btn" onclick="runTerminalCmd('skills')">skills</button>
+                            <button type="button" class="quick-btn" onclick="runTerminalCmd('awards')">awards</button>
+                            <button type="button" class="quick-btn" onclick="runTerminalCmd('cv')">cv</button>
+                            <button type="button" class="quick-btn" onclick="runTerminalCmd('contact')">contact</button>
+                            <button type="button" class="quick-btn" onclick="runTerminalCmd('clear')">clear</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="section skills" id="skills">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">&lt;skills&gt;</span>
+                <h2 class="section-title">Technical Skills</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-card" data-tilt data-aos>
+                    <div class="skill-icon">
+                        <i class="fas fa-microchip"></i>
+                    </div>
+                    <h3 class="skill-title">Embedded & Programming</h3>
+                    <div class="skill-tags">
+                        <span class="tag">Arduino</span>
+                        <span class="tag">ESP32</span>
+                        <span class="tag">ESP8266</span>
+                        <span class="tag">STM32</span>
+                        <span class="tag">Raspberry Pi Pico W</span>
+                    </div>
+                </div>
+                <div class="skill-card" data-tilt data-aos>
+                    <div class="skill-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h3 class="skill-title">Robotics & Control</h3>
+                    <div class="skill-tags">
+                        <span class="tag">ROS 2 <small>(Learning)</small></span>
+                        <span class="tag">Webots Simulation <small>(Learning)</small></span>
+                        <span class="tag">Obstacle Detection</span>
+                        <span class="tag">Dead-Reckoning</span>
+                        <span class="tag">Remote Control</span>
+                    </div>
+                </div>
+                <div class="skill-card" data-tilt data-aos>
+                    <div class="skill-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3 class="skill-title">Firmware & Software</h3>
+                    <div class="skill-tags">
+                        <span class="tag">C/C++</span>
+                        <span class="tag">Arduino Firmware</span>
+                        <span class="tag">Python <small>(Basic)</small></span>
+                        <span class="tag">Dart <small>(Basic)</small></span>
+                    </div>
+                </div>
+                <div class="skill-card" data-tilt data-aos>
+                    <div class="skill-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h3 class="skill-title">Electronics & Control</h3>
+                    <div class="skill-tags">
+                        <span class="tag">Sensor Interfacing</span>
+                        <span class="tag">Motor Control</span>
+                        <span class="tag">Relay Control</span>
+                        <span class="tag">Soldering</span>
+                        <span class="tag">Prototyping</span>
+                        <span class="tag">System Wiring</span>
+                    </div>
+                </div>
+                <div class="skill-card" data-tilt data-aos>
+                    <div class="skill-icon">
+                        <i class="fas fa-wifi"></i>
+                    </div>
+                    <h3 class="skill-title">IoT & Connectivity</h3>
+                    <div class="skill-tags">
+                        <span class="tag">Blynk IoT</span>
+                        <span class="tag">Google Firebase</span>
+                        <span class="tag">Data Logging</span>
+                    </div>
+                </div>
+                <div class="skill-card" data-tilt data-aos>
+                    <div class="skill-icon">
+                        <i class="fas fa-drafting-compass"></i>
+                    </div>
+                    <h3 class="skill-title">Design & Development Tools</h3>
+                    <div class="skill-tags">
+                        <span class="tag">KiCad</span>
+                        <span class="tag">Fritzing</span>
+                        <span class="tag">SolidWorks</span>
+                        <span class="tag">Arduino IDE</span>
+                        <span class="tag">VS Code</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="section projects" id="projects">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">&lt;projects&gt;</span>
+                <h2 class="section-title">Engineering Projects</h2>
+                <div class="section-line"></div>
+                <!-- Project Category Filters -->
+                <div class="project-filters">
+                    <button type="button" class="filter-btn active" data-filter="all">
+                        <i class="fas fa-layer-group"></i> All <span class="filter-count">6</span>
+                    </button>
+                    <button type="button" class="filter-btn" data-filter="robotics">
+                        <i class="fas fa-robot"></i> Robotics & Control <span class="filter-count">4</span>
+                    </button>
+                    <button type="button" class="filter-btn" data-filter="iot">
+                        <i class="fas fa-wifi"></i> IoT & Automation <span class="filter-count">4</span>
+                    </button>
+                    <button type="button" class="filter-btn" data-filter="awards">
+                        <i class="fas fa-trophy"></i> Awards & Competitions <span class="filter-count">2</span>
+                    </button>
+                </div>
+            </div>
+            <div class="projects-grid">
+                <!-- Project 1: Multi-Sensor IoT Weather Station -->
+                <div class="project-card" data-category="iot" data-project-key="weather_station" data-tilt data-aos>
+                    <div class="project-media">
+                        <img src="assets/projects/weather-station.jpg" alt="IoT Weather Station" class="project-img"
+                            onerror="this.remove()">
+                        <div class="hardware-hud hud-weather">
+                            <div class="hud-top">
+                                <span class="hud-status live"><span class="hud-dot"></span> 16x2 LCD SIMULATOR</span>
+                                <span class="hud-bus">SPI: SD-CARD LOG</span>
+                            </div>
+                            <div class="lcd-screen">
+                                <div class="lcd-line">TEMP:28.4C HUM:64%</div>
+                                <div class="lcd-line">PRES:1013hPa SD:OK</div>
+                            </div>
+                            <div class="hud-footer">
+                                <span><i class="fas fa-cloud"></i> Firebase App: <a
+                                        href="https://hirusha-weatherstation.web.app/" target="_blank"
+                                        style="color:var(--accent); text-decoration:underline;">hirusha-weatherstation.web.app
+                                        <i class="fas fa-arrow-up-right-from-square"></i></a></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-header">
+                        <div class="project-icon">
+                            <i class="fas fa-cloud-sun-rain"></i>
+                        </div>
+                        <div class="project-badges">
+                            <span class="project-badge personal">Personal Project</span>
+                            <span class="project-badge wip"><i class="fas fa-cog fa-spin"></i> In Development</span>
+                        </div>
+                    </div>
+                    <h3 class="project-title">Multi-Sensor IoT Weather Station</h3>
+                    <p class="project-context">Personal Project – In Development</p>
+                    <p class="project-description">
+                        Breadboard prototype using ESP32, environmental sensors, SD-card data logging
+                        and a 16×2 LCD with a custom Google Firebase web dashboard for real-time remote monitoring.
+                    </p>
+                    <ul class="project-highlights">
+                        <li>Environmental sensor integration with real-time LCD display</li>
+                        <li>SD-card data logging for historical analysis</li>
+                        <li>Live web dashboard deployed on <a href="https://hirusha-weatherstation.web.app/"
+                                target="_blank"
+                                style="color:var(--accent); text-decoration:underline; font-weight:600;">Firebase
+                                Hosting <i class="fas fa-arrow-up-right-from-square"></i></a></li>
+                        <li>Completing hardware implementation on a dot board</li>
+                    </ul>
+                    <div class="project-tech">
+                        <span>ESP32</span>
+                        <span>Google Firebase</span>
+                        <span>Web Dashboard</span>
+                        <span>LCD Display</span>
+                        <span>SD Card</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/hirusha-niluminda" target="_blank" class="project-btn">
+                            <i class="fab fa-github"></i> Firmware
+                        </a>
+                        <button type="button" class="project-btn" onclick="openProjectModal('weather_station', 'demo')">
+                            <i class="fas fa-photo-film"></i> Images/Videos
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Project 2: Autonomous Soil Mapping Rover -->
+                <div class="project-card" data-category="robotics iot" data-project-key="soil_rover" data-tilt data-aos>
+                    <div class="project-media">
+                        <img src="assets/projects/soil-rover.jpg" alt="Autonomous Soil Mapping Rover"
+                            class="project-img" onerror="this.remove()">
+                        <div class="hardware-hud hud-soil">
+                            <div class="hud-top">
+                                <span class="hud-status active"><span class="hud-dot"></span> DUAL MCU INTERCOMM</span>
+                                <span class="hud-bus">UART / I2C PROTOCOL</span>
+                            </div>
+                            <div class="dual-mcu-box">
+                                <div class="mcu-chip">
+                                    <span class="mcu-title">MCU 1: NAV</span>
+                                    <span class="mcu-sub">Rover Mobility</span>
+                                </div>
+                                <div class="mcu-wire"><span class="packet-pulse"></span></div>
+                                <div class="mcu-chip">
+                                    <span class="mcu-title">MCU 2: SENSE</span>
+                                    <span class="mcu-sub">Linear Actuator</span>
+                                </div>
+                            </div>
+                            <div class="hud-footer">
+                                <span>PROBE MECHANISM: INSERTION READY</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-header">
+                        <div class="project-icon">
+                            <i class="fas fa-satellite-dish"></i>
+                        </div>
+                        <div class="project-badges">
+                            <span class="project-badge team">Team Project</span>
+                            <span class="project-badge wip"><i class="fas fa-cog fa-spin"></i> In Development</span>
+                        </div>
+                    </div>
+                    <h3 class="project-title">Autonomous Soil Mapping Rover</h3>
+                    <p class="project-context">University Team Project – Final Year Project</p>
+                    <p class="project-description">
+                        Agricultural rover with custom firmware for automated soil nutrient
+                        mapping using automated sensor-insertion mechanisms.
+                    </p>
+                    <ul class="project-highlights">
+                        <li>Developing custom firmware for automated sensor-insertion mechanism</li>
+                        <li>Working on automated soil measurement systems</li>
+                        <li>Designing communication between two microcontrollers for coordinated operations</li>
+                    </ul>
+                    <div class="project-tech">
+                        <span>Dual MCU</span>
+                        <span>Custom Firmware</span>
+                        <span>Sensor Array</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/hirusha-niluminda" target="_blank" class="project-btn">
+                            <i class="fab fa-github"></i> Firmware
+                        </a>
+                        <button type="button" class="project-btn" onclick="openProjectModal('soil_rover', 'demo')">
+                            <i class="fas fa-photo-film"></i> Images/Videos
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Project 3: Autonomous Agricultural Robot -->
+                <div class="project-card" data-category="robotics awards" data-project-key="agri_robot" data-tilt
+                    data-aos>
+                    <div class="project-media">
+                        <img src="assets/projects/agri-robot.jpg" alt="Autonomous Agricultural Robot"
+                            class="project-img" onerror="this.remove()">
+                        <div class="hardware-hud hud-agri">
+                            <div class="hud-top">
+                                <span class="hud-status active"><span class="hud-dot"></span> NAV: DEAD-RECKONING</span>
+                                <span class="hud-bus">MCU: ESP32 + 2.4G TX</span>
+                            </div>
+                            <div class="radar-scan-box">
+                                <div class="radar-circle"></div>
+                                <div class="radar-sweep"></div>
+                                <div class="radar-target" style="top: 28%; left: 62%;"></div>
+                                <div class="radar-info">
+                                    <span>ULTRASONIC: 124 cm</span>
+                                    <span>ENCODER: 420 TICKS</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-header">
+                        <div class="project-icon">
+                            <i class="fas fa-tractor"></i>
+                        </div>
+                        <div class="project-badges">
+                            <span class="project-badge team">Team Project</span>
+                            <span class="project-badge trophy">INCO 2026</span>
+                        </div>
+                    </div>
+                    <h3 class="project-title">Autonomous Agricultural Robot</h3>
+                    <p class="project-context">Team Project – INCO Competition 2026</p>
+                    <p class="project-description">
+                        ESP32-based autonomous agricultural robot for precision seed dispensing,
+                        controlled fertilizer application, and automated watering.
+                    </p>
+                    <ul class="project-highlights">
+                        <li>Integrated ultrasonic & Hall-effect sensors for obstacle detection & wheel monitoring</li>
+                        <li>Implemented dead-reckoning navigation algorithms</li>
+                        <li>Designed and built custom remote controller for manual operation</li>
+                    </ul>
+                    <div class="project-tech">
+                        <span>ESP32</span>
+                        <span>C/C++</span>
+                        <span>Ultrasonic Sensors</span>
+                        <span>Hall-Effect</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/Hirusha2019/AgriRemote.git" target="_blank" class="project-btn">
+                            <i class="fab fa-github"></i> Firmware
+                        </a>
+                        <button type="button" class="project-btn" onclick="openProjectModal('agri_robot', 'demo')">
+                            <i class="fas fa-photo-film"></i> Images/Videos
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Project 4: 4-DOF Robotic Arm -->
+                <div class="project-card" data-category="robotics iot" data-project-key="robotic_arm" data-tilt
+                    data-aos>
+                    <div class="project-media">
+                        <img src="assets/projects/robotic-arm.jpg" alt="4-DOF Robotic Arm" class="project-img"
+                            onerror="this.remove()">
+                        <div class="hardware-hud hud-arm">
+                            <div class="hud-top">
+                                <span class="hud-status active"><span class="hud-dot"></span> KINEMATICS
+                                    DUAL-CTRL</span>
+                                <span class="hud-bus">SERVO PWM [x4]</span>
+                            </div>
+                            <div class="arm-telemetry">
+                                <div class="joint-bar"><span>J1 (BASE):</span>
+                                    <div class="bar-fill" style="width: 50%;"></div><b>90°</b>
+                                </div>
+                                <div class="joint-bar"><span>J2 (SHOULDER):</span>
+                                    <div class="bar-fill" style="width: 35%;"></div><b>65°</b>
+                                </div>
+                                <div class="joint-bar"><span>J3 (ELBOW):</span>
+                                    <div class="bar-fill" style="width: 70%;"></div><b>120°</b>
+                                </div>
+                                <div class="joint-bar"><span>J4 (GRIPPER):</span>
+                                    <div class="bar-fill" style="width: 85%;"></div><b>CLOSED</b>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-header">
+                        <div class="project-icon">
+                            <i class="fas fa-hand-rock"></i>
+                        </div>
+                        <div class="project-badges">
+                            <span class="project-badge personal">Personal Project</span>
+                        </div>
+                    </div>
+                    <h3 class="project-title">4-DOF Robotic Arm</h3>
+                    <p class="project-context">Personal Project – ESP32-Based Dual Control System</p>
+                    <p class="project-description">
+                        Assembled a 4-DOF robotic arm with dual control modes — wireless web
+                        dashboard and manual joystick remote controller.
+                    </p>
+                    <ul class="project-highlights">
+                        <li>Assembled 4-DOF robotic arm using a mechanical kit</li>
+                        <li>Wireless control through ESP32-based web dashboard</li>
+                        <li>Alternative manual control using custom remote with two joysticks</li>
+                    </ul>
+                    <div class="project-tech">
+                        <span>ESP32</span>
+                        <span>Web Dashboard</span>
+                        <span>Servo Motors</span>
+                        <span>Joystick Control</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/hirusha-niluminda" target="_blank" class="project-btn">
+                            <i class="fab fa-github"></i> Firmware
+                        </a>
+                        <button type="button" class="project-btn" onclick="openProjectModal('robotic_arm', 'demo')">
+                            <i class="fas fa-photo-film"></i> Images/Videos
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Project 5: Obstacle Avoiding Robot -->
+                <div class="project-card" data-category="robotics" data-project-key="obstacle_car" data-tilt data-aos>
+                    <div class="project-media">
+                        <img src="assets/projects/obstacle-car.jpg" alt="Obstacle Avoiding Robot" class="project-img"
+                            onerror="this.remove()">
+                        <div class="hardware-hud hud-car">
+                            <div class="hud-top">
+                                <span class="hud-status active"><span class="hud-dot"></span> SONAR SENSING</span>
+                                <span class="hud-bus">L298N DUAL H-BRIDGE</span>
+                            </div>
+                            <div class="car-sonar-box">
+                                <div class="sonar-arc"></div>
+                                <div class="sonar-distance">OBSTACLE DIST: <b>38 cm</b></div>
+                                <div class="motor-state">MOTORS: <b>FWD [PWM: 210]</b></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-header">
+                        <div class="project-icon">
+                            <i class="fas fa-car"></i>
+                        </div>
+                        <div class="project-badges">
+                            <span class="project-badge personal">Personal Project</span>
+                        </div>
+                    </div>
+                    <h3 class="project-title">Obstacle Avoiding Robot</h3>
+                    <p class="project-context">Personal Project – Arduino-Based Robotic Car</p>
+                    <p class="project-description">
+                        Four-wheel robotic vehicle with basic obstacle detection
+                        and manual wireless control via custom remote controller.
+                    </p>
+                    <ul class="project-highlights">
+                        <li>Built four-wheel robotic vehicle with obstacle detection</li>
+                        <li>Implemented manual wireless control using custom remote</li>
+                    </ul>
+                    <div class="project-tech">
+                        <span>Arduino</span>
+                        <span>Ultrasonic Sensor</span>
+                        <span>Motor Driver</span>
+                        <span>Wireless Control</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/hirusha-niluminda" target="_blank" class="project-btn">
+                            <i class="fab fa-github"></i> Firmware
+                        </a>
+                        <button type="button" class="project-btn" onclick="openProjectModal('obstacle_car', 'demo')">
+                            <i class="fas fa-photo-film"></i> Images/Videos
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Project 6: Eco Smart Greenhouse (Award Winner) -->
+                <div class="project-card" data-category="iot awards" data-project-key="greenhouse" data-tilt data-aos>
+                    <div class="project-media">
+                        <img src="assets/projects/greenhouse.jpg" alt="Eco Smart Greenhouse" class="project-img"
+                            onerror="this.remove()">
+                        <div class="hardware-hud hud-greenhouse">
+                            <div class="hud-top">
+                                <span class="hud-status live"><span class="hud-dot"></span> LIVE SENSING</span>
+                                <span class="hud-bus">BUS: ESP32 I2C / RELAY</span>
+                            </div>
+                            <div class="hud-grid">
+                                <div class="hud-metric">
+                                    <span class="hud-label">AIR TEMP</span>
+                                    <span class="hud-val">27.4°C</span>
+                                </div>
+                                <div class="hud-metric">
+                                    <span class="hud-label">SOIL MOISTURE</span>
+                                    <span class="hud-val text-green">68% [OPTIMAL]</span>
+                                </div>
+                                <div class="hud-metric">
+                                    <span class="hud-label">RELAYS</span>
+                                    <span class="hud-val text-cyan">FAN: ON | MIST: AUTO</span>
+                                </div>
+                                <div class="hud-metric">
+                                    <span class="hud-label">CAM INFERENCE</span>
+                                    <span class="hud-val">EDGE IMPULSE OK</span>
+                                </div>
+                            </div>
+                            <div class="hud-footer">
+                                <span><i class="fas fa-cloud"></i> Firebase Cloud: Sync Active (100ms)</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-header">
+                        <div class="project-icon">
+                            <i class="fas fa-leaf"></i>
+                        </div>
+                        <div class="project-badges">
+                            <span class="project-badge team">Team Project</span>
+                            <span class="project-badge trophy">
+                                <i class="fas fa-trophy"></i> 2nd Place – Vertex 2025
+                            </span>
+                        </div>
+                    </div>
+                    <h3 class="project-title">Eco Smart Greenhouse</h3>
+                    <p class="project-context">Team InnoX – Vertex 2025 Inter University Innovation Competition</p>
+                    <p class="project-description">
+                        Developed embedded control software and completed system wiring
+                        using an ESP32 expansion board for intelligent greenhouse automation.
+                    </p>
+                    <ul class="project-highlights">
+                        <li>Automated environmental control using DHT11, soil moisture & light sensors</li>
+                        <li>Managed pumps, fans, misting, heating & grow lights through relay-controlled outputs</li>
+                        <li>Firebase dashboard for remote monitoring & ESP32-CAM with Edge Impulse for plant disease
+                            detection</li>
+                    </ul>
+                    <div class="project-tech">
+                        <span>ESP32</span>
+                        <span>Firebase</span>
+                        <span>Edge Impulse</span>
+                        <span>DHT11</span>
+                        <span>Relay Control</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/hirusha-niluminda" target="_blank" class="project-btn">
+                            <i class="fab fa-github"></i> Firmware
+                        </a>
+                        <button type="button" class="project-btn" onclick="openProjectModal('greenhouse', 'demo')">
+                            <i class="fas fa-photo-film"></i> Images/Videos
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section class="section education" id="education">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">&lt;education&gt;</span>
+                <h2 class="section-title">Education</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item" data-aos>
+                    <div class="timeline-marker">
+                        <i class="fas fa-university"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-badge">Present</div>
+                        <h3>National Diploma in Technology (NDT)</h3>
+                        <h4>Electronics & Telecommunication Engineering</h4>
+                        <p class="timeline-institution">
+                            <i class="fas fa-building-columns"></i>
+                            Institute of Technology, University of Moratuwa (ITUM)
+                        </p>
+                    </div>
+                </div>
+                <div class="timeline-item" data-aos>
+                    <div class="timeline-marker">
+                        <i class="fas fa-school"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-badge">2022</div>
+                        <h3>G.C.E. Advanced Level</h3>
+                        <h4>Physical Science Stream</h4>
+                        <p class="timeline-institution">
+                            <i class="fas fa-building-columns"></i>
+                            Henegama Central College
+                        </p>
+                        <p class="timeline-detail">3 C passes</p>
+                    </div>
+                </div>
+                <div class="timeline-item" data-aos>
+                    <div class="timeline-marker">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-badge">2019</div>
+                        <h3>G.C.E. Ordinary Level</h3>
+                        <p class="timeline-institution">
+                            <i class="fas fa-building-columns"></i>
+                            Henegama Central College
+                        </p>
+                        <p class="timeline-detail">8A 1C passes</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section class="section certifications" id="certifications">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">&lt;certifications&gt;</span>
+                <h2 class="section-title">Certifications & Achievements</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="cert-grid">
+                <div class="cert-card" data-tilt data-aos>
+                    <div class="cert-icon">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <div class="cert-content">
+                        <h3>2nd Place – Vertex 2025</h3>
+                        <p>Inter University Innovation Competition</p>
+                        <span class="cert-org">Eco Smart Greenhouse (Team InnoX)</span>
+                    </div>
+                </div>
+                <div class="cert-card" data-tilt data-aos>
+                    <div class="cert-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <div class="cert-content">
+                        <h3>PLC Certificate Course</h3>
+                        <p>Industrial PLC Programming</p>
+                        <span class="cert-org">Sri Lanka Institute of Robotics</span>
+                    </div>
+                </div>
+                <div class="cert-card" data-tilt data-aos>
+                    <div class="cert-icon">
+                        <i class="fas fa-layer-group"></i>
+                    </div>
+                    <div class="cert-content">
+                        <h3>From Schematic to PCB</h3>
+                        <p>Layout Fundamentals</p>
+                        <span class="cert-org">Coursera</span>
+                    </div>
+                </div>
+                <div class="cert-card" data-tilt data-aos>
+                    <div class="cert-icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <div class="cert-content">
+                        <h3>Python for Beginners</h3>
+                        <p>Programming Fundamentals</p>
+                        <span class="cert-org">University of Moratuwa (DP Education)</span>
+                    </div>
+                </div>
+                <div class="cert-card" data-tilt data-aos>
+                    <div class="cert-icon">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <div class="cert-content">
+                        <h3>Web Design for Beginners</h3>
+                        <p>Web Development Fundamentals</p>
+                        <span class="cert-org">University of Moratuwa (DP Education)</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section contact" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">&lt;contact&gt;</span>
+                <h2 class="section-title">Get in Touch</h2>
+                <div class="section-line"></div>
+                <p class="section-subtitle">
+                    Looking for a 6-month in-plant training opportunity starting January 2027.
+                    Let's connect!
+                </p>
+            </div>
+            <!-- Resume Download Banner -->
+            <div class="resume-banner" data-aos>
+                <div class="resume-banner-content">
+                    <div class="resume-banner-icon">
+                        <i class="fas fa-file-pdf"></i>
+                    </div>
+                    <div class="resume-banner-text">
+                        <h3>Curriculum Vitae Ready for Review</h3>
+                        <p>Open my comprehensive 2-page CV including academics, full project breakdowns & training
+                            objectives.</p>
+                    </div>
+                </div>
+                <a href="assets/Hirusha_Niluminda_CV.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-cv">
+                    <i class="fas fa-arrow-up-right-from-square"></i> Open CV (PDF)
+                </a>
+            </div>
+
+            <div class="contact-grid">
+                <a href="mailto:hirushanilumindapc@gmail.com" class="contact-card" data-tilt data-aos>
+                    <div class="contact-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h3>Email</h3>
+                    <p>hirushanilumindapc@gmail.com</p>
+                </a>
+                <a href="tel:+94740824902" class="contact-card" data-tilt data-aos>
+                    <div class="contact-icon">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <h3>Phone</h3>
+                    <p>+94 740824902</p>
+                </a>
+                <a href="https://linkedin.com/in/hirusha-niluminda-41a738265" target="_blank" class="contact-card"
+                    data-tilt data-aos>
+                    <div class="contact-icon">
+                        <i class="fab fa-linkedin"></i>
+                    </div>
+                    <h3>LinkedIn</h3>
+                    <p>hirusha-niluminda</p>
+                </a>
+                <div class="contact-card" data-tilt data-aos>
+                    <div class="contact-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h3>Location</h3>
+                    <p>Kirindiwela, Sri Lanka</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <span class="logo-bracket">&lt;</span>HN<span class="logo-bracket">/&gt;</span>
+                </div>
+                <p class="footer-text">
+                    Designed & built by Hirusha Niluminda &copy; <span id="year"></span>
+                </p>
+                <div class="footer-links">
+                    <a href="assets/Hirusha_Niluminda_CV.pdf" target="_blank" rel="noopener noreferrer"
+                        title="Open CV in New Tab (PDF)"><i class="fas fa-file-pdf"></i></a>
+                    <a href="mailto:hirushanilumindapc@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+                    <a href="tel:+94740824902" title="Phone"><i class="fas fa-phone"></i></a>
+                    <a href="https://linkedin.com/in/hirusha-niluminda-41a738265" target="_blank" title="LinkedIn"><i
+                            class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Hardware Schematic & Project Detail Modal -->
+    <div class="project-modal" id="projectModal" aria-hidden="true">
+        <div class="modal-backdrop" onclick="closeProjectModal()"></div>
+        <div class="modal-container">
+            <button class="modal-close" onclick="closeProjectModal()" aria-label="Close modal">&times;</button>
+            <div class="modal-header">
+                <div class="modal-header-top">
+                    <span class="modal-badge" id="modalBadge">Robotics & Embedded</span>
+                    <div class="modal-nav">
+                        <button type="button" class="modal-nav-btn" onclick="navigateProjectModal(-1)"
+                            title="Previous Project">
+                            <i class="fas fa-arrow-left"></i> Prev
+                        </button>
+                        <button type="button" class="modal-nav-btn" onclick="navigateProjectModal(1)"
+                            title="Next Project">
+                            Next <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+                <h2 class="modal-title" id="modalTitle">Project Title</h2>
+                <p class="modal-subtitle" id="modalSubtitle">Subsystem Overview</p>
+                <div class="modal-tabs">
+                    <button type="button" class="modal-tab active" data-tab="arch" onclick="switchModalTab('arch')">
+                        <i class="fas fa-network-wired"></i> Architecture
+                    </button>
+                    <button type="button" class="modal-tab" data-tab="bom" onclick="switchModalTab('bom')">
+                        <i class="fas fa-microchip"></i> Hardware BOM
+                    </button>
+                    <button type="button" class="modal-tab" data-tab="firmware" onclick="switchModalTab('firmware')">
+                        <i class="fas fa-code"></i> Firmware & Logic
+                    </button>
+                    <button type="button" class="modal-tab" data-tab="demo" onclick="switchModalTab('demo')">
+                        <i class="fas fa-video"></i> Visual Proof
+                    </button>
+                </div>
+            </div>
+            <div class="modal-body" id="modalBody">
+                <!-- Dynamically populated via script.js -->
+            </div>
+            <div class="modal-footer" id="modalFooter">
+                <!-- Action links dynamically populated -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Floating Back-to-Top Button -->
+    <button id="backToTop" class="back-to-top" title="Back to top" aria-label="Back to top">
+        <i class="fas fa-rocket"></i>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
