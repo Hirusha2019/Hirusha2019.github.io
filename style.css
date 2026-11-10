@@ -748,8 +748,19 @@ body:hover .cursor-glow {
     flex-direction: column;
     align-items: center;
     gap: 8px;
-    z-index: 2;
+    z-index: 5;
     animation: fadeInUp 0.8s ease 0.8s both;
+    text-decoration: none;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.scroll-indicator:hover {
+    opacity: 0.85;
+}
+
+.scroll-indicator:hover .mouse {
+    border-color: var(--accent);
 }
 
 .mouse {
@@ -2349,7 +2360,9 @@ body:hover .cursor-glow {
    =========================== */
 @media (max-width: 1024px) {
     .hero {
-        padding: 120px 0 60px;
+        min-height: auto;
+        padding: 120px 0 50px;
+        flex-direction: column;
     }
 
     .hero-container {
@@ -2370,6 +2383,19 @@ body:hover .cursor-glow {
 
     .hero-actions, .hero-stats {
         justify-content: center;
+    }
+
+    .scroll-indicator {
+        position: relative;
+        bottom: auto;
+        left: auto;
+        transform: none;
+        margin: 36px auto 0;
+        z-index: 5;
+    }
+
+    .scroll-indicator:hover {
+        transform: translateY(4px);
     }
 
     .hero-visual {
@@ -2439,7 +2465,12 @@ body:hover .cursor-glow {
     }
 
     .hero {
-        padding: 100px 0 60px;
+        min-height: auto;
+        padding: 100px 0 40px;
+    }
+
+    .scroll-indicator {
+        margin: 32px auto 0;
     }
 
     .hero-actions {
@@ -2488,7 +2519,21 @@ body:hover .cursor-glow {
 
 @media (max-width: 480px) {
     .hero-stats {
-        gap: 24px;
+        gap: 20px;
+    }
+
+    .scroll-indicator {
+        margin: 28px auto 0;
+    }
+
+    .scroll-indicator .mouse {
+        width: 22px;
+        height: 36px;
+    }
+
+    .scroll-indicator span {
+        font-size: 0.7rem;
+        letter-spacing: 1.5px;
     }
     
     .section {
